@@ -1,9 +1,34 @@
-# Modern JS Developer Quiz - Robot Battledome
+# Modern JavaScript Developer Quiz
+# Robot Battledome
+
+## Setup
+
+1. `cd` to your quizzes directory.
+1. Clone this repository and `cd` into the directory it creates.
+1. Now run the following commands.
+
+    ```bash
+    git checkout -b quiz
+    touch index.html
+    touch quiz.js
+    touch quiz.css
+    ```
+
+You are now ready to work in the `quiz` branch.
+
+When your work in complete, push up the branch (`git push origin quiz`) and submit the pull request on Github.
+
+## Instructions
 
 ### Code/Tools Requirements
 
 1. Use ES6 language features wherever you can. At a minimum, you should be using **let**, **const**, fat arrows, property shorthand, method properties, and string templates.
 1. Have a Grunt task running at all times to validate your JavaScript. We will be validating your project and we should see 0 errors.
+1. You must have a very basic, just a few, test suite that validates the core logic of the application.
+Some things to test:
+   + Instantiation of new objects creates the inheritance you expect
+   + Calculations for health, damage, armor, etc. work properly
+   + Passing in arguments to set properties like `name` or `number of arms` creates those properties
 
 1. You must use jQuery for interacting with the DOM.
 

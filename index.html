@@ -8,29 +8,31 @@
 	<link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-
+<section id="chooser">
 <div id="botNameInput">
-	<p id="botOne">RoBoT 1 : <input type="text" name="" value="" placeholder="Enter Name"></p>
+	<p id="botOne">RoBoT 1 : <input id="userName" type="text" name="" value="" placeholder="Enter Name"></p>
 	<div id="botSelect">
 		<ul>
 			<h5>Ground Robots</h5>
-			<li>Roger : <input type="radio" name="#" value="" placeholder=""></li>
-			<li>Leeroy : <input type="radio" name="#" value="" placeholder=""></li>
+			<li>Roger : <input type="radio"  class="playerBtn" name="#" value="Roger" placeholder=""></li>
+			<li>Leeroy : <input type="radio" class="playerBtn" name="#" value="Leeroy" placeholder=""></li>
 		</ul>
 		<ul>
 			<h5>Air Robots</h5>
-			<li>Wiliferd : <input type="radio" name="#" value="" placeholder=""></li>
-			<li>Larry : <input type="radio" name="#" value="" placeholder=""></li>
+			<li>Wiliferd : <input type="radio" class="playerBtn" name="#" value="Wiliferd" placeholder=""></li>
+			<li>Larry : <input type="radio" class="playerBtn" name="#" value="Larry" placeholder=""></li>
 		</ul>
 		<ul>
 			<h5>Sneaky Robots</h5>
-			<li>Hubert : <input type="radio" name="#" value="" placeholder=""></li>
-			<li>Falcor : <input type="radio" name="#" value="" placeholder=""></li>
+			<li>Hubert : <input type="radio" class="playerBtn" name="#" value="Hubert" placeholder=""></li>
+			<li>Falcore : <input type="radio" class="playerBtn" name="#" value="Falcore" placeholder=""></li>
 		</ul>
 	</div>
-	<button id="attackButton" type="submit">Fight!</button>
+	<button id="playerOneSubmit" type="submit">Next</button>
 </div>
-<div id="fight">
+</section>
+<!-- <div id="fight">
+		<button id="attackButton" type="submit">Fight!</button>
 	<h1>BATTLE!</h1>
 </div>
 <div id="botTwoNameInput">
@@ -38,27 +40,50 @@
 	<div id="botSelect">
 		<ul>
 			<h5>Ground Robots</h5>
-			<li>Roger : <input type="radio" name="@" value="" placeholder=""></li>
-			<li>Leeroy : <input type="radio" name="@" value="" placeholder=""></li>
+			<li>Roger : <input type="radio" name="@" value="Roger" placeholder=""></li>
+			<li>Leeroy : <input type="radio" name="@" value="Leeroy" placeholder=""></li>
 		</ul>
 		<ul>
 			<h5>Air Robots</h5>
-			<li>Wiliferd : <input type="radio" name="@" value="" placeholder=""></li>
-			<li>Larry : <input type="radio" name="@" value="" placeholder=""></li>
+			<li>Wiliferd : <input type="radio" name="@" value="Wiliferd" placeholder=""></li>
+			<li>Larry : <input type="radio" name="@" value="Larry" placeholder=""></li>
 		</ul>
 		<ul>
 			<h5>Sneaky Robots</h5>
-			<li>Hubert : <input type="radio" name="@" value="" placeholder=""></li>
-			<li>Falcor : <input type="radio" name="@" value="" placeholder=""></li>
+			<li>Hubert : <input type="radio" name="@" value="Hubert" placeholder=""></li>
+			<li>Falcore : <input type="radio" name="@" value="Falcore" placeholder=""></li>
 		</ul>
 	</div>
-	<button type="submit">Fight!</button>
-</div>
-	
+	<button id="playerTwoSubmit" type="submit">Fight!</button>
+</div> -->
+
+<section id="weapons" hidden>
+	<div>
+		<input type="radio" name="weaponChoice" class="weaponBtn" value="stick"> Stick</input>
+		<input type="radio" name="weaponChoice" class="weaponBtn" value="saw"> Saw</input>
+		<input type="radio" name="weaponChoice" class="weaponBtn" value="hammer"> Hammer</input>
+		<input type="radio" name="weaponChoice" class="weaponBtn" value="ragnarok"> Ragnarok</input>
+	</div>
+	<button id="weaponChoice">Next</button>
+</section>
+
+<section id="fight" hidden>
+	<div>
+		<div id="playerStats"></div>
+		<div id="enemyStats"></div>
+		<div id="battletext"></div>
+	</div>
+	<button id="attackButton">Attack</button>
+</section>
+
 
 <script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="javascripts/Botwar.js"></script>
+<script type="text/javascript" src="javascripts/player.js"></script>
+<script type="text/javascript" src="javascripts/enemy.js"></script>
+<script type="text/javascript" src="javascripts/weapon.js"></script>
 <script type="text/javascript" src="javascripts/battle.js"></script>
-<script type="text/javascript" src="javascripts/quiz.js"></script>
+<script type="text/javascript" src="javascripts/playerchoice.js"></script>
 </body>
 </html>

@@ -17,7 +17,9 @@ var Botwar = (function(battle) {
 		$("#player2Stats").html (`
 			<h1>${player2.name}</h1>
 			<h3>Current Health: <span id="currentplayer2Life"></span></h3>
-			<h3>${player2.attack}</h3>
+			<h3>${player2.weapon.weapon2Name}</h3>
+			<h3>${player2.atkType}</h3>
+			<h3>${player2.type}</h3
 			`);
 
 		currentPlayerLife = player.life;
@@ -41,7 +43,7 @@ var Botwar = (function(battle) {
 	  //battle function
 	$("#attackButton").on("click", function() {
 		let playerAttack = Math.floor(Math.random() * (player.attack + player.weapon.addedDamage));
-		let player2Attack = Math.floor(Math.random()* (player2.attack + 25));
+		let player2Attack = Math.floor(Math.random()* (player2.attack + player.weapon.addedDamage));
 		console.log("player attack", playerAttack);
 		console.log("player2 attack", player2Attack);
 
@@ -67,7 +69,7 @@ var Botwar = (function(battle) {
   	battle.combatText = function(playerAttack, player2Attack) {
   		$("#battletext").text("");
 
-  		let combatLog = $(`<p><span>${player.name}</span> attacks <span>${player2.name}</span> with <span>${player.weapon.weaponName}</span> dealing <span>${playerAttack}</span> damage</p>`);
+  		let combatLog = $(`<p><span>${player.name}</span> attacks <span>${player2.name}</span> with <span>${player.weapon.weaponName}</span> dealing <span>${playerAttack}</span> damage plus an additional <span>${player.poisonAtk}</span> poison damage</p>`);
   		combatLog.hide().appendTo("#battletext").fadeIn();
 
 	};

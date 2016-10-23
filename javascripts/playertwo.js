@@ -11,8 +11,8 @@ var Botwar = (function(player2){
 
     //2nd tier classes -----------
       //Ground Based 
-  let GroundBot2 = function(name) {
-    Robot2.call(this, name);
+    let GroundBot2 = function(name) {
+      Robot2.call(this, name);
       this.type = "Ground";
       this.atkType = "Physical";
       this.armor += 5;
@@ -20,8 +20,8 @@ var Botwar = (function(player2){
     GroundBot2.prototype = new Robot2();
 
       //Air Based
-  let Airbot2 = function(name) {
-    Robot2.call(this, name)
+    let Airbot2 = function(name) {
+      Robot2.call(this, name)
       this.type = "Air";
       this.atkType = "Ranged";
       this.armor += 2;
@@ -40,28 +40,28 @@ var Botwar = (function(player2){
     player2.botOption2 = {};
 
     //Sub-classes ---------
-
       //GroundBot2
     player2.botOption2.Doobie = function(name) {
       GroundBot2.call(this, name);
-      this.life += 400;
-      this.attack += 50;
+      this.life += 700;
+      this.attack += 25;
     };
     player2.botOption2.Doobie.prototype = new GroundBot2();
 
       //Airbot2
     player2.botOption2.Apple = function(name) {
       Airbot2.call(this, name);
-        this.life = 150;
-        this.attack += 150;
+      this.life = 500;
+      this.attack += 100;
     };
     player2.botOption2.Apple.prototype = new Airbot2();
 
       //SneakyBot2
     player2.botOption2.Dilbert = function(name) {
       SneakyBot2.call(this, name)
-      this.life += 200;
-        this.attack += 150;
+      this.life += 500;
+      this.attack += 100;
+      this.poisonAtk = this.attack + 4;
     };
     player2.botOption2.Dilbert.prototype = new SneakyBot2();
 

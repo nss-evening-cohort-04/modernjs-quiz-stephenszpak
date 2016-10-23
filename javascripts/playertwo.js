@@ -42,28 +42,28 @@ var Botwar = (function(player2){
     //Sub-classes ---------
 
       //GroundBot2
-    player2.botOption2.Roger = function(name) {
+    player2.botOption2.Doobie = function(name) {
       GroundBot2.call(this, name);
       this.life += 400;
       this.attack += 50;
     };
-    player2.botOption2.Roger.prototype = new GroundBot2();
+    player2.botOption2.Doobie.prototype = new GroundBot2();
 
       //Airbot2
-    player2.botOption2.Wiliferd = function(name) {
+    player2.botOption2.Apple = function(name) {
       Airbot2.call(this, name);
         this.life = 150;
         this.attack += 150;
     };
-    player2.botOption2.Wiliferd.prototype = new Airbot2();
+    player2.botOption2.Apple.prototype = new Airbot2();
 
       //SneakyBot2
-    player2.botOption2.Hubert = function(name) {
+    player2.botOption2.Dilbert = function(name) {
       SneakyBot2.call(this, name)
       this.life += 200;
         this.attack += 150;
     };
-    player2.botOption2.Hubert.prototype = new SneakyBot2();
+    player2.botOption2.Dilbert.prototype = new SneakyBot2();
 
   return player2
 

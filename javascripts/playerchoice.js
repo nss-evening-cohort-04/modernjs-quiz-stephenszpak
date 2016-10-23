@@ -22,7 +22,7 @@ var Botwar = (function(choice){
 
       console.log("current hero", currentPlayer );
       // console.log("current enemy", currentEnemy );
-      Botwar.setUpGame(currentPlayer, currentPlayerTwo);
+      Botwar.setUpGame(currentPlayer);
     }
   });
 

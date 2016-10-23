@@ -12,17 +12,17 @@ var Botwar = (function(choice){
 
   $("#weaponChoice").on("click", function() {
     if (weaponChoice === undefined) {
-      alert("hey, pick a weapon! You don't want to be weaponless in the fight against this chef!")
+      alert("hey, pick a weapon!")
     } else {
       $("#fight").slideDown();
       $("#weapons").slideUp();
       
       currentPlayer.weapon = choice.setWeapon();
-      currentEnemy = choice.generateEnemy();
+      // currentEnemy = choice.generateEnemy();
 
       console.log("current hero", currentPlayer );
-      console.log("current enemy", currentEnemy );
-      Botwar.setUpGame(currentPlayer, currentEnemy);
+      // console.log("current enemy", currentEnemy );
+      Botwar.setUpGame(currentPlayer, currentPlayerTwo);
     }
   });
 
@@ -38,8 +38,8 @@ var Botwar = (function(choice){
 
   choice.setPlayer = function() {
     let name = userName.val();
-    console.log(Botwar);
     let playerSelect = new Botwar.botOption[selected](name);
+    console.log("player one", playerSelect);
     return playerSelect
   };
 

@@ -40,6 +40,7 @@ var Botwar = (function(player){
   	player.botOption = {};
 
   	//Sub-classes ---------
+
   	  //groundbot
   	player.botOption.Roger = function(name) {
   		GroundBot.call(this, name);

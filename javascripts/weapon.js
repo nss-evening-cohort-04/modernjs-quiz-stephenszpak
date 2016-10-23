@@ -1,4 +1,4 @@
- var Botwar = (function(weapon) {
+ var Botwar = (function(weapon, playerTwoWeapon) {
 
  	//empty weapon var
   	let basicWeapon = function() {
@@ -21,11 +21,13 @@
  	};
  	weapon.weaponOption.saw.prototype = new basicWeapon();
 
+
  	weapon.weaponOption.hammer = function() {
  		this.weaponName = "Hammer";
  		this.addedDamage = 35;
  	};
  	weapon.weaponOption.hammer.prototype = new basicWeapon();
+
 
  	weapon.weaponOption.ragnarok = function() {
  		this.weaponName = "Ragnarok";

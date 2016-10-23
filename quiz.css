@@ -22,6 +22,14 @@
 	padding: 7px;
 }
 
+#weaponsTwo {
+	float: right;
+}
+
+#enemyStats {
+	float: right;
+}
+
 .visible {
 	display: inline-block;
 	float: left;

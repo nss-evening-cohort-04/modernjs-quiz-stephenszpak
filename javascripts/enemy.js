@@ -28,6 +28,7 @@ var Botwar = (function(enemy){
 		};
 	};
 
+	//Enemies
   	enemy.Nuk = new enemy.Cpu("Nuk Dean");
   	enemy.Nuk.attack += 35;
 

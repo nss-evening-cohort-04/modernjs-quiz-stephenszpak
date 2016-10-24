@@ -1,5 +1,4 @@
 var Botwar = (function(player2){
-
   //base Robot2 function ---!---
     let Robot2 = function(name) {
       this.attack = 50;
@@ -43,8 +42,9 @@ var Botwar = (function(player2){
       //GroundBot2
     player2.botOption2.Doobie = function(name) {
       GroundBot2.call(this, name);
-      this.life += 700;
+      this.life += Math.floor(Math.random() * (700 - 500 + 1));
       this.attack += 25;
+      console.log(this.life);
     };
     player2.botOption2.Doobie.prototype = new GroundBot2();
 
@@ -60,8 +60,8 @@ var Botwar = (function(player2){
     player2.botOption2.Dilbert = function(name) {
       SneakyBot2.call(this, name)
       this.life += 500;
-      this.attack += 100;
-      this.poisonAtk = this.attack + 4;
+      this.attack += 150;
+      this.poisonAtk2 = this.attack + 4;
     };
     player2.botOption2.Dilbert.prototype = new SneakyBot2();
 

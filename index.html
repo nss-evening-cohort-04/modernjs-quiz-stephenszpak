@@ -1,100 +1,102 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="quiz.css">
-	<link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-</head>
-<body>
-<section id="chooser">
-<div id="botNameInput">
-	<p id="botOne">RoBoT 1 : <input id="userName" type="text" name="" value="" placeholder="Enter Name"></p>
-	<div id="botSelect">
-		<ul>
-			<h5>Ground Robots</h5>
-			<li>Roger : <input type="radio"  class="playerBtn" name="#" value="Roger" placeholder=""></li>
-			<li>Leeroy : <input type="radio" class="playerBtn" name="#" value="Leeroy" placeholder=""></li>
-		</ul>
-		<ul>
-			<h5>Air Robots</h5>
-			<li>Wiliferd : <input type="radio" class="playerBtn" name="#" value="Wiliferd" placeholder=""></li>
-			<li>Larry : <input type="radio" class="playerBtn" name="#" value="Larry" placeholder=""></li>
-		</ul>
-		<ul>
-			<h5>Sneaky Robots</h5>
-			<li>Hubert : <input type="radio" class="playerBtn" name="#" value="Hubert" placeholder=""></li>
-			<li>Falcore : <input type="radio" class="playerBtn" name="#" value="Falcore" placeholder=""></li>
-		</ul>
-	</div>
-	<button id="playerOneSubmit" type="submit">Next</button>
-</div>
-</section>
-
-<section id="weapons" hidden>
-	<div>
-		<input type="radio" name="weaponChoice" class="weaponBtn" value="stick"> Stick</input>
-		<input type="radio" name="weaponChoice" class="weaponBtn" value="saw"> Saw</input>
-		<input type="radio" name="weaponChoice" class="weaponBtn" value="hammer"> Hammer</input>
-		<input type="radio" name="weaponChoice" class="weaponBtn" value="ragnarok"> Ragnarok</input>
-	</div>
-	<button id="weaponChoice">Next</button>
-</section>
-
-<section id="chooser2">
-<div id="botTwoNameInput">
-	<p id="botTwo">RoBoT 2 : <input id="userInputTwo" type="text" name="" value="" placeholder="Enter Name"></p>
-	<div id="botSelect">
-		<ul>
-			<h5>Ground Robots</h5>
-			<li>Doobie : <input type="radio" class = "playerTwoBtn" name="@" value="Doobie" placeholder=""></li>
-			<li>Atreyu : <input type="radio" class = "playerTwoBtn" name="@" value="Atreyu" placeholder=""></li>
-		</ul>
-		<ul>
-			<h5>Air Robots</h5>
-			<li>Apple : <input type="radio" class = "playerTwoBtn" name="@" value="Apple" placeholder=""></li>
-			<li>Bob : <input type="radio" class = "playerTwoBtn" name="@" value="Bob" placeholder=""></li>
-		</ul>
-		<ul>
-			<h5>Sneaky Robots</h5>
-			<li>Dilbert : <input type="radio" class = "playerTwoBtn" name="@" value="Dilbert" placeholder=""></li>
-			<li>Inigo Montoya : <input type="radio" class = "playerTwoBtn" name="@" value="Inigo Montoya" placeholder=""></li>
-		</ul>
-	</div>
-</div>
-</section>
-
-<section id="weaponsTwo" hidden>
-	<div>
-		<input type="radio" name="weaponChoiceTwo" class="weaponBtnTwo" value="golfclub"> Golf Club</input>
-		<input type="radio" name="weaponChoiceTwo" class="weaponBtnTwo" value="straight"> Straight Blade</input>
-		<input type="radio" name="weaponChoiceTwo" class="weaponBtnTwo" value="jackhammer"> Jack Hammer</input>
-		<input type="radio" name="weaponChoiceTwo" class="weaponBtnTwo" value="battleaxe"> Battle Axe</input>
-	</div>
-	<button id="weaponChoiceTwo">Next</button>
-</section>
-
-
-<section id="fight" hidden>
-	<div>
-		<div id="playerStats"></div>
-		<div id="player2Stats"></div>
-		<div id="battletext"></div>
-	</div>
-	<button id="attackButton">Attack</button>
-</section>
-
-
-<script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="javascripts/Botwar.js"></script>
-<script type="text/javascript" src="javascripts/player.js"></script>
-<script type="text/javascript" src="javascripts/playertwo.js"></script>
-<script type="text/javascript" src="javascripts/weapon.js"></script>
- <script type="text/javascript" src="javascripts/weapontwo.js"></script>
-<script type="text/javascript" src="javascripts/playerchoice.js"></script>
-<script type="text/javascript" src="javascripts/battle.js"></script>
-
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <link rel="stylesheet" href="quiz.css">
+        <link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-4">
+                <section id="chooser">
+                    <div id="botNameInput">
+                        <p id="botOne">RoBoT 1 : <input id="userName" type="text" name="" value="" placeholder="Enter Name"></p>
+                        <div id="botSelect">
+                            <ul>
+                                <h5>Ground Robots</h5>
+                                <li>Roger : <input type="radio"  class="playerBtn" name="#" value="Roger" placeholder=""></li>
+                                <li>Leeroy : <input type="radio" class="playerBtn" name="#" value="Leeroy" placeholder=""></li>
+                            </ul>
+                            <ul>
+                                <h5>Air Robots</h5>
+                                <li>Wiliferd : <input type="radio" class="playerBtn" name="#" value="Wiliferd" placeholder=""></li>
+                                <li>Larry : <input type="radio" class="playerBtn" name="#" value="Larry" placeholder=""></li>
+                            </ul>
+                            <ul>
+                                <h5>Sneaky Robots</h5>
+                                <li>Hubert : <input type="radio" class="playerBtn" name="#" value="Hubert" placeholder=""></li>
+                                <li>Falcore : <input type="radio" class="playerBtn" name="#" value="Falcore" placeholder=""></li>
+                            </ul>
+                        </div>
+                        <button id="playerOneSubmit" type="submit">Next</button>
+                    </div>
+                </section>
+                <section id="weapons" hidden>
+                    <div id="container c">
+                        <input type="radio" name="weaponChoice" class="weaponBtn" value="stick"> Stick</input>
+                        <input type="radio" name="weaponChoice" class="weaponBtn" value="saw"> Saw</input>
+                        <input type="radio" name="weaponChoice" class="weaponBtn" value="hammer"> Hammer</input>
+                        <input type="radio" name="weaponChoice" class="weaponBtn" value="ragnarok"> Ragnarok</input>
+                    </div>
+                    <button id="weaponChoice">Next</button>
+                </section>
+            </div>
+            <div class="col-md-4">
+                <div id="result">
+                	<section id="fight" hidden>
+	                    <div id="container">
+	                        <div id="playerStats"></div>
+	                        <div id="player2Stats"></div>
+	                        <div id="battletext"></div>
+	                    </div>
+                    <button id="attackButton">Attack</button>
+                	</section>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <section id="chooser2">
+                    <div id="botTwoNameInput">
+                        <p id="botTwo">RoBoT 2 : <input id="userInputTwo" type="text" name="" value="" placeholder="Enter Name"></p>
+                        <div id="botSelect">
+                            <ul>
+                                <h5>Ground Robots</h5>
+                                <li>Doobie : <input type="radio" class = "playerTwoBtn" name="@" value="Doobie" placeholder=""></li>
+                                <li>Atreyu : <input type="radio" class = "playerTwoBtn" name="@" value="Atreyu" placeholder=""></li>
+                            </ul>
+                            <ul>
+                                <h5>Air Robots</h5>
+                                <li>Apple : <input type="radio" class = "playerTwoBtn" name="@" value="Apple" placeholder=""></li>
+                                <li>Bob : <input type="radio" class = "playerTwoBtn" name="@" value="Bob" placeholder=""></li>
+                            </ul>
+                            <ul>
+                                <h5>Sneaky Robots</h5>
+                                <li>Dilbert : <input type="radio" class = "playerTwoBtn" name="@" value="Dilbert" placeholder=""></li>
+                                <li>Inigo Montoya : <input type="radio" class = "playerTwoBtn" name="@" value="Inigo Montoya" placeholder=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="weaponsTwo"  hidden>
+                    <div>
+                        <input type="radio" name="weaponChoiceTwo" class="weaponBtnTwo" value="golfclub"> Golf Club</input>
+                        <input type="radio" name="weaponChoiceTwo" class="weaponBtnTwo" value="straight"> Straight Blade</input>
+                        <input type="radio" name="weaponChoiceTwo" class="weaponBtnTwo" value="jackhammer"> Jack Hammer</input>
+                        <input type="radio" name="weaponChoiceTwo" class="weaponBtnTwo" value="battleaxe"> Battle Axe</input>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script type="text/javascript" src="/lib/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/lib/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="javascripts/Botwar.js"></script>
+        <script type="text/javascript" src="javascripts/player.js"></script>
+        <script type="text/javascript" src="javascripts/playertwo.js"></script>
+        <script type="text/javascript" src="javascripts/weapon.js"></script>
+        <script type="text/javascript" src="javascripts/weapontwo.js"></script>
+        <script type="text/javascript" src="javascripts/playerchoice.js"></script>
+        <script type="text/javascript" src="javascripts/battle.js"></script>
+    </body>
 </html>

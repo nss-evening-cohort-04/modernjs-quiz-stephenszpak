@@ -62,7 +62,7 @@ var Botwar = (function(player){
       SneakyBot.call(this, name)
       this.life += 500;
     	this.attack += 100;
-      this.poisonAtk = this.attack(4);
+      this.poisonAtk = this.attack + 4;
     };
     player.botOption.Hubert.prototype = new SneakyBot();
 

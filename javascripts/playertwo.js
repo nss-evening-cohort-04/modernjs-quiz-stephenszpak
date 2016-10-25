@@ -44,9 +44,15 @@ var Botwar = (function(player2){
       GroundBot2.call(this, name);
       this.life += Math.floor(Math.random() * (700 - 500 + 1));
       this.attack += 25;
-      console.log(this.life);
     };
     player2.botOption2.Doobie.prototype = new GroundBot2();
+
+    player2.botOption2.Atreyu = function(name) {
+      GroundBot2.call(this, name);
+      this.life += Math.floor(Math.random() * (700 - 300 + 1));
+      this.attack += 25;
+    };
+    player2.botOption2.Atreyu.prototype = new GroundBot2();
 
       //Airbot2
     player2.botOption2.Apple = function(name) {
@@ -56,6 +62,14 @@ var Botwar = (function(player2){
     };
     player2.botOption2.Apple.prototype = new Airbot2();
 
+    player2.botOption2.Bob = function(name) {
+      Airbot2.call(this, name);
+      this.life = 500;
+      this.attack += 100;
+    };
+    player2.botOption2.Bob.prototype = new Airbot2();
+
+
       //SneakyBot2
     player2.botOption2.Dilbert = function(name) {
       SneakyBot2.call(this, name)
@@ -64,6 +78,14 @@ var Botwar = (function(player2){
       this.poisonAtk2 = this.attack + 4;
     };
     player2.botOption2.Dilbert.prototype = new SneakyBot2();
+
+    player2.botOption2.Inigo = function(name) {
+      SneakyBot2.call(this, name)
+      this.life += 500;
+      this.attack += 5000;
+      this.poisonAtk2 = this.attack + 4;
+    };
+    player2.botOption2.Inigo.prototype = new SneakyBot2();
 
   return player2
 

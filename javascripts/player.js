@@ -46,16 +46,32 @@ var Botwar = (function(player){
       GroundBot.call(this, name);
       this.life += 700;
       this.attack += 25;
+      this.armor += 15;
     };
     player.botOption.Roger.prototype = new GroundBot();
+
+    player.botOption.Leeroy = function(name) {
+      GroundBot.call(this, name);
+      this.life += 700;
+      this.attack += 25;
+    };
+    player.botOption.Leeroy.prototype = new GroundBot();
 
     //airbot
     player.botOption.Wiliferd = function(name) {
       AirBot.call(this, name);
       this.life = 500;
       this.attack += 100;
+      this.armor += 3;
     };
     player.botOption.Wiliferd.prototype = new AirBot();
+
+    player.botOption.Larry = function(name) {
+      AirBot.call(this, name);
+      this.life = 500;
+      this.attack += 100;
+    };
+    player.botOption.Larry.prototype = new AirBot();
 
     //sneakybot
     player.botOption.Hubert = function(name) {
@@ -65,6 +81,14 @@ var Botwar = (function(player){
       this.poisonAtk = this.attack + 4;
     };
     player.botOption.Hubert.prototype = new SneakyBot();
+
+    player.botOption.Falcore = function(name) {
+      SneakyBot.call(this, name)
+      this.life += 500;
+      this.attack += 100;
+      this.poisonAtk = this.attack + 4;
+    };
+    player.botOption.Falcore.prototype = new SneakyBot();
 
     return player
 

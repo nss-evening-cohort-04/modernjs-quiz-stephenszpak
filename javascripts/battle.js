@@ -88,18 +88,18 @@ var Botwar = (function(battle) {
     			$("#chooser2").slideDown();
 			}
 			else if (currentPlayerLife <= 0) {
-				gameResult.html(`<h3>${player2.name} has beaten by ${player.name}!</h3>`);
+				gameResult.html(`<h3>YOU LOSEEE!</h3>`);
 				$("#fight").slideUp();
 				$("#chooser").slideDown();
     			$("#chooser2").slideDown();
 			}
 			else if(currentplayer2Life <= 0) {
-				gameResult.html(`<h3>${player.name} has beaten ${player2.name}!</h3>`);
+				gameResult.html(`<h3>You have defeated ${player2.name}!</h3>`);
 				$("#fight").slideUp();
 				$("#chooser").slideDown();
     			$("#chooser2").slideDown();
-			};
-		};
+			}
+		}
 	};
   return battle;
 

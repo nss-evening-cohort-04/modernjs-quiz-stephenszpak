@@ -1,3 +1,4 @@
+"use strict";
  var Botwar = (function(weapon, playerTwoWeapon) {
 
  	//empty weapon var
@@ -35,6 +36,6 @@
  	};
  	weapon.weaponOption.ragnarok.prototype = new basicWeapon();
 
-  	return weapon
+  	return weapon;
 
-})(Botwar || {})
+})(Botwar || {});

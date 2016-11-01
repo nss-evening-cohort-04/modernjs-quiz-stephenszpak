@@ -1,3 +1,4 @@
+"use strict";
 var Botwar = (function(player2){
   //base Robot2 function ---!---
     let Robot2 = function(name) {
@@ -20,7 +21,7 @@ var Botwar = (function(player2){
 
       //Air Based
     let Airbot2 = function(name) {
-      Robot2.call(this, name)
+      Robot2.call(this, name);
       this.type = "Air";
       this.atkType = "Ranged";
       this.armor += 2;
@@ -29,7 +30,7 @@ var Botwar = (function(player2){
 
       //Sneaky Based
     let SneakyBot2 = function(name) {
-      Robot2.call(this, name)
+      Robot2.call(this, name);
       this.type = "Ground";
       this.atkType = "Poison";
       this.armor += 1;
@@ -72,7 +73,7 @@ var Botwar = (function(player2){
 
       //SneakyBot2
     player2.botOption2.Dilbert = function(name) {
-      SneakyBot2.call(this, name)
+      SneakyBot2.call(this, name);
       this.life += 500;
       this.attack += 150;
       this.poisonAtk2 = this.attack + 4;
@@ -80,13 +81,13 @@ var Botwar = (function(player2){
     player2.botOption2.Dilbert.prototype = new SneakyBot2();
 
     player2.botOption2.Inigo = function(name) {
-      SneakyBot2.call(this, name)
+      SneakyBot2.call(this, name);
       this.life += 500;
       this.attack += 5000;
       this.poisonAtk2 = this.attack + 4;
     };
     player2.botOption2.Inigo.prototype = new SneakyBot2();
 
-  return player2
+  return player2;
 
 })(Botwar || {});

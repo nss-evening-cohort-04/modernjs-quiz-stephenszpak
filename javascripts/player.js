@@ -1,3 +1,4 @@
+"use strict";
 var Botwar = (function(player){
 
 	//base robot function ---!---
@@ -21,7 +22,7 @@ var Botwar = (function(player){
 
     //Air Based
     let AirBot = function(name) {
-      Robot.call(this, name)
+      Robot.call(this, name);
       this.type = "Air";
       this.atkType = "Ranged";
       this.armor += 2;
@@ -30,7 +31,7 @@ var Botwar = (function(player){
 
     //Sneaky Based
     let SneakyBot = function(name) {
-      Robot.call(this, name)
+      Robot.call(this, name);
       this.type = "Ground";
       this.atkType = "Poison";
       this.armor += 1;
@@ -75,7 +76,7 @@ var Botwar = (function(player){
 
     //sneakybot
     player.botOption.Hubert = function(name) {
-      SneakyBot.call(this, name)
+      SneakyBot.call(this, name);
       this.life += 500;
     	this.attack += 100;
       this.poisonAtk = this.attack + 4;
@@ -83,13 +84,13 @@ var Botwar = (function(player){
     player.botOption.Hubert.prototype = new SneakyBot();
 
     player.botOption.Falcore = function(name) {
-      SneakyBot.call(this, name)
+      SneakyBot.call(this, name);
       this.life += 500;
       this.attack += 100;
       this.poisonAtk = this.attack + 4;
     };
     player.botOption.Falcore.prototype = new SneakyBot();
 
-    return player
+    return player;
 
 })(Botwar || {});

@@ -1,3 +1,4 @@
+"use strict";
  var Botwar = (function(weapon2) {
 
  	//empty weapon2 var
@@ -35,6 +36,6 @@
  	};
  	weapon2.weapon2Option.battleaxe.prototype = new basicWeapon2();
 
-  	return weapon2
+  	return weapon2;
 
-})(Botwar || {})
+})(Botwar || {});

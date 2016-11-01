@@ -1,12 +1,13 @@
+"use strict";
 var Botwar = (function(choice){
   let userName = $("#userName");
-  let playerBtn = $(".playerBtn")
-  let weaponBtn = $(".weaponBtn")
-  let selected, weaponChoice
+  let playerBtn = $(".playerBtn");
+  let weaponBtn = $(".weaponBtn");
+  let selected, weaponChoice;
   let userNameTwo = $("#userInputTwo");
-  let playerBtnTwo = $(".playerTwoBtn")
-  let weaponBtnTwo = $(".weaponBtnTwo")
-  let playerTwoSelected, weaponChoiceTwo
+  let playerBtnTwo = $(".playerTwoBtn");
+  let weaponBtnTwo = $(".weaponBtnTwo");
+  let playerTwoSelected, weaponChoiceTwo, currentPlayer, currentPlayerTwo;
 
   //players submit
   $( "#playerOneSubmit" ).on( "click", function() {
@@ -20,9 +21,7 @@ var Botwar = (function(choice){
 
   //weapon submits
   $("#weaponChoice").on("click", function() {
-    if (weaponChoice === undefined) {
-      alert("hey, pick a weapon!")
-    } else {
+
       $("#fight").slideDown();
       $("#weapons").slideUp();
       $("#weaponsTwo").slideUp();
@@ -30,26 +29,22 @@ var Botwar = (function(choice){
       currentPlayer.weapon = choice.setWeapon();
       currentPlayerTwo.weapon = choice.setWeaponTwo();
 
-      console.log("current hero", currentPlayer );
-      console.log("current enemy", currentPlayerTwo );
       Botwar.setUpGame(currentPlayer, currentPlayerTwo);
-    }
+    
   });
 
   playerBtn.click(function() {
     selected = playerBtn.filter(":checked").val();
-    console.log("selected", selected);
   });
 
   weaponBtn.click(function() {
     weaponChoice = weaponBtn.filter(":checked").val();
-    console.log("weapon selected", weaponChoice);
   });
 
   choice.setPlayer = function() {
     let name = userName.val();
     let playerSelect = new Botwar.botOption[selected](name);
-    return playerSelect
+    return playerSelect;
   };
 
   choice.setWeapon = function() {
@@ -59,18 +54,16 @@ var Botwar = (function(choice){
 
   playerBtnTwo.click(function() {
     playerTwoSelected = playerBtnTwo.filter(":checked").val();
-    console.log("selected two", playerTwoSelected);
   });
 
   weaponBtnTwo.click(function() {
     weaponChoiceTwo = weaponBtnTwo.filter(":checked").val();
-    console.log("weapon selected two", weaponChoiceTwo);
   });
 
   choice.setPlayerTwo = function() {
     let nameTwo = userNameTwo.val();
     let playerTwoSelect = new Botwar.botOption2[playerTwoSelected](nameTwo);
-    return playerTwoSelect
+    return playerTwoSelect;
   };
 
   choice.setWeaponTwo = function() {
@@ -79,6 +72,5 @@ var Botwar = (function(choice){
   };
 
   return choice;
-  return choice
 
-})(Botwar || {})
+})(Botwar || {});

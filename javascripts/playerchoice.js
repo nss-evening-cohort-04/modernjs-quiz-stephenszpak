@@ -11,27 +11,37 @@ var Botwar = (function(choice){
 
   //players submit
   $( "#playerOneSubmit" ).on( "click", function() {
+    if(selected && playerTwoSelected === undefined) {   
+        $("#playerOneSubmit").addClass('btn-danger'); 
+    }else{
     currentPlayer = choice.setPlayer();
     currentPlayerTwo = choice.setPlayerTwo();
     $("#weapons").slideDown();
     $("#weaponsTwo").slideDown();
     $("#chooser").slideUp();
     $("#chooser2").slideUp();
+  }
   });
+    
 
   //weapon submits
   $("#weaponChoice").on("click", function() {
-
-      $("#fight").slideDown();
-      $("#weapons").slideUp();
-      $("#weaponsTwo").slideUp();
-      
+    if(weaponChoice && weaponChoiceTwo === undefined) {
+        $("#weaponChoice").addClass('btn-danger');
+    }else{
+        $("#fight").slideDown();
+        $("#weapons").slideUp();
+        $("#weaponsTwo").slideUp();
+     
       currentPlayer.weapon = choice.setWeapon();
       currentPlayerTwo.weapon = choice.setWeaponTwo();
 
       Botwar.setUpGame(currentPlayer, currentPlayerTwo);
-    
-  });
+}
+    });
+
+
+
 
   playerBtn.click(function() {
     selected = playerBtn.filter(":checked").val();
@@ -58,6 +68,7 @@ var Botwar = (function(choice){
 
   weaponBtnTwo.click(function() {
     weaponChoiceTwo = weaponBtnTwo.filter(":checked").val();
+    console.log("wepn 2", weaponChoiceTwo);
   });
 
   choice.setPlayerTwo = function() {

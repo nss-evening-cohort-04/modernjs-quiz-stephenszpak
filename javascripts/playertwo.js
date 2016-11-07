@@ -70,7 +70,6 @@ var Botwar = (function(player2){
     };
     player2.botOption2.Bob.prototype = new Airbot2();
 
-
       //SneakyBot2
     player2.botOption2.Dilbert = function(name) {
       SneakyBot2.call(this, name);

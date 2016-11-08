@@ -1,0 +1,63 @@
+#botNameInput {
+	display: inline-block;
+	float: left;
+	margin-left: 10%;
+	border: solid 2px;
+	padding: 7px;
+}
+
+#botSelect {
+	display: inline-block;
+}
+
+#botSelect ul {
+	list-style-type: none;
+}
+
+#botTwoNameInput {
+	display: inline-block;
+	float: right;
+	margin-right: 10%;
+	border: solid 2px;
+	padding: 7px;
+}
+
+#weaponsTwo {
+	float: right;
+}
+
+#player2Stats {
+	float: right;
+}
+
+.visible {
+	display: inline-block;
+	float: left;
+	padding: 15px;
+	border: solid 2px;
+	margin-left: 10px;
+}
+
+.hidden {
+	display: none;
+}
+.show {
+	display:block;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
